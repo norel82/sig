@@ -11,6 +11,7 @@ Ce projet est une démonstration d'une application PHP simple qui permet de stoc
 - Serveur PHP interne (`php -S`)
 - Composer (si besoin)
 
+---
 
 # Configuration de la base de données
 Créer une base PostgreSQL avec PostGIS activé :
@@ -46,6 +47,7 @@ Une fois connecté, tu peux taper :
 | `\q`                   | Quitter `psql`                         |
 
 
+---
 
 
 ## 🗺️ Affichage des lieux sur une carte (Leaflet + API PHP)
@@ -75,3 +77,20 @@ Cette route génère une `FeatureCollection` GeoJSON en interrogeant la table `l
   ]
 }
 ```
+
+---
+
+### 🧭 Fonctionnalité : Recherche de ville + Cercle de distance
+
+Ce projet propose une page de démonstration simple utilisant **Leaflet** et l’API **Nominatim d’OpenStreetMap**.
+
+#### 📄 `ville.php` – Rechercher une ville et afficher un cercle de 50 km
+
+| Élément               | Description                                                                 |
+|-----------------------|-----------------------------------------------------------------------------|
+| 🧭 Saisie utilisateur  | L'utilisateur entre une ville (ex: *Paris*)                                 |
+| 🌍 Géocodage           | La ville est géolocalisée via [Nominatim](https://nominatim.openstreetmap.org/) |
+| 🔵 Affichage carte     | La carte se centre sur la ville                                              |
+| 🟢 Cercle 50 km        | Un cercle vert de 50 km de rayon est affiché autour du centre de la ville   |
+
+
