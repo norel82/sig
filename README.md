@@ -44,3 +44,34 @@ Une fois connecté, tu peux taper :
 | `\d lieux`             | Voir la structure de la table `lieux` |
 | `SELECT * FROM lieux;` | Voir toutes les lignes de la table     |
 | `\q`                   | Quitter `psql`                         |
+
+
+
+
+## 🗺️ Affichage des lieux sur une carte (Leaflet + API PHP)
+
+Une carte interactive est disponible grâce à [Leaflet](https://leafletjs.com/), alimentée par une API PHP qui retourne les lieux géographiques au format **GeoJSON**.
+
+### API : `/api/lieux.php`
+
+Cette route génère une `FeatureCollection` GeoJSON en interrogeant la table `lieux` via PDO/PostGIS.
+
+**Exemple de réponse JSON :**
+```json
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2945, 48.8584]
+      },
+      "properties": {
+        "id": 1,
+        "nom": "Tour Eiffel"
+      }
+    }
+  ]
+}
+```
