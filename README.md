@@ -10,6 +10,9 @@ Ce projet est une démonstration d'une application PHP simple qui permet de stoc
 - PostGIS
 - Serveur PHP interne (`php -S`)
 - Composer (si besoin)
+- Leaflet.js pour l’affichage cartographique
+- API Nominatim (OpenStreetMap) pour le géocodage
+
 
 ---
 
