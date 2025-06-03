@@ -14,6 +14,13 @@
 </head>
 
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="ville.php">Rayon distance</a></li>
+        </ul>
+    </nav>
+
     <h1>Bienvenue</h1>
 
     <div id="map"></div>
